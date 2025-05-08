@@ -6,32 +6,6 @@ import os
 # Page configuration
 st.set_page_config(layout="wide", page_title="Image Analysis Dashboard")
 
-# Get current user
-session = get_active_session()
-current_user = session.sql("SELECT CURRENT_USER()").collect()[0][0]
-
-# Navigation Sidebar
-with st.sidebar:
-    # Welcome message
-    st.markdown("""
-        <div style='background: linear-gradient(135deg, #29b5e8 0%, #2171d4 100%); 
-                    padding: 1rem; 
-                    border-radius: 8px; 
-                    margin-bottom: 2rem;'>
-            <h4 style='color: white; margin: 0;'>👋 Welcome, {}</h4>
-        </div>
-    """.format(current_user), unsafe_allow_html=True)
-    
-    # Navigation Link
-    st.markdown("### 🔗 Snowflake Resources")
-    st.link_button(
-        "📁 Input Stage", 
-        "https://app.snowflake.com/sfsenorthamerica/demo_gkuncheria_va/#/data/databases/SALES/schemas/PUBLIC/stage/INPUT_STAGE",
-        use_container_width=True
-    )
-
-# [Rest of your existing code remains the same...]
-
 # Enhanced Custom CSS
 st.markdown("""
     <style>
