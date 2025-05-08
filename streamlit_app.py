@@ -110,7 +110,7 @@ if uploaded_files:
         
         if analyze_button or compare_button:
             try:
-                session.sql("CREATE STAGE IF NOT EXISTS input_stage").collect()
+                session.sql("CREATE STAGE IF NOT EXISTS input_stage ENCRYPTION = (TYPE = 'SNOWFLAKE_SSE')").collect()
                 
                 if analyze_button:
                     progress_bar = st.progress(0)
