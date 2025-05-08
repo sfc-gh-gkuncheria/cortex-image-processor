@@ -1,6 +1,8 @@
 # cortex-image-processor
 SiS App to Analyze and Compare Images
 
+Set Streamlit Verison to 1.42.0 for best experience.
+
 
 1. SiS Code will create a stage named "input_stage"
 2. If you want to demostrate Python Copilot, this is the prompt that you can use to add a navigation pane:
